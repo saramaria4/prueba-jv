@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pregunta 6</title>
+    <link rel="stylesheet" href="http://code.jquery.com/jquery‐2.2.1.js">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<!--Pregunta 6
+Se pide crear una página donde se encuentre sólo un div y dentro de éste se encuentre una lista ordenada
+con 3 elementos en la lista, "Elemento 1", "Elemento 2" y "Elemento 3".
+Programar que al hacer click sobre el div se cree un elemento de la lista consecutivo(en este caso "Elemento 4
+" y así sucesivamente), pero que al hacer click sobre un elemento "li", NO se cree el elemento consecutivo. -->
+
+
+</head>
+
+<body>
+<div id="hola">Hola G5</div>
+    <ul>
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+    </ul>
+
+<button id=btn_add type="button">Agregar!</button> 
+<button id=btn_delete type="button">Delete</button> 
+
+<script>
+
+
+$( document ).ready(function() {
+    var contador= 4;
+    $("#btn_add").on("click",function(e){
+        $("div").append("Elemento"+contador);
+            contador ++ ;
+    });   
+});
+
+    $("#btn_delete").on("click",function(e){
+        $("li").first().remove();   
+    });
+
+
+</script>
+
+</body>
+</html>
