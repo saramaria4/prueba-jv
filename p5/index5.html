@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Pregunta 6</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  
+
+  <style>
+  .box {
+        height:100px;
+        width:100px;
+        padding:10px;
+        background-color:yellow;
+        position:relative;
+    }
+
+  </style>
+  </head>
+
+
+<body>
+
+<div class="box"></div>
+ 
+<script>
+
+var contador = 0;
+
+  $( document ).ready(function() {
+
+    $("body").keypress(function(e){
+      //alert("listo");
+      if (e.keyCode == 37){
+        console.log("left!!")
+       $("#box").css({"left": contador +'50 px'});
+       contador --;
+      } else if (e.keyCode == 39){
+        console.log("right!!")
+       $("#box").css({"right": contador +'50 px'});
+       contador ++;
+    
+      }   
+    });
+  })
+
+   </script>
+
+  </body>
+</html>
