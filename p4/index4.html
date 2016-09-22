@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pregunta 4</title>
+    <link rel="stylesheet" href="http://code.jquery.com/jquery‐2.2.1.js">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<!--Pregunta 4
+Se pide crear una página que permita al usuario poner texto y darle estilo, para eso tendrá un textarea donde
+podrá escribir, todo lo que escriba debe aparecer como texto a la derecha.
+Además dispondrá de los siguientes controles que modificarán las propiedades del texto a la derecha.  
+
+Un	selector	de	colores.
+Un	input	que	permita	definir	el	tamaño	del	texto
+Un	input	que	permita	definir	la	tipografía-->
+
+
+</head>
+<body>
+
+<h1>Ingresa un texto</h1>
+  
+  <div class="form-group">
+    <textarea id= text name="escribe algo"> "escribe algo"</textarea>
+  </div>
+
+      <p><strong>Font-size</strong></p>
+      <input type="button" value="+" name="font_size_more" id="font_size_more" class="btn btn-primary">
+      <input type="button" value="-" name="font_size_less" id="font_size_less" class="btn btn-default">
+      <br>
+      <br>
+
+      <p><strong>Font-Family</strong></p>
+      <select name="font_family" id="font_family" class="form-control">
+        <option>Seleccione tipografía</option>
+        <option>"Times New Roman", Times, serif</option>
+        <option>Arial, Helvetica, sans-serif</option>
+        <option>Impact, Charcoal, sans-serif </option>
+      </select>
+      <br>
+      <p><strong>Background-color</strong></p>
+      <input type="color" class="form-control" id="bgcolor" value="#ffffff">
+
+      
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+    
+ 
+var contador = 0;
+
+$( document ).ready(function() {
+ 
+    $("#text").on("click",function(e){
+        $("div").append();
+    });   
+
+
+    $("#font_size_more").on("click",function(e){ 
+        $("p").css({ contador +'px'});
+       contador ++;  
+    });
+
+    $("#font_size_less").on("click",function(e){ 
+        $("p").css({ contador +'px'});
+       contador --;  
+    });
+
+    $("#font_family").change("click",function(e){ 
+        $("option").select({ }); 
+    });
+
+   
+});
+
+
+ });
+
+
+    
+
+</script>
+
+</body>
+</html>
+
